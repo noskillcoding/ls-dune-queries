@@ -1,0 +1,149 @@
+{
+ "5996309": {
+  "name": "LS2-daily",
+  "version": 9,
+  "file": "5996309_LS2-daily.sql",
+  "description": "Contract Activity Analysis\nAction Identification: Categorizes contract interactions (explore, attack, flee, buy items, etc.) to understand player behavior and feature usage.\nTransaction Count (txs): Measures the frequency of interactions, indicating player engagement and contract popularity.\nDate: Tracks activity over time to identify trends and peak usage periods.",
+  "params": []
+ },
+ "5996449": {
+  "name": "LS2-total",
+  "version": 14,
+  "file": "5996449_LS2-total.sql",
+  "description": "Game Transactions Analysis\nUnique Users (u): Measures the total number of distinct players who have interacted with the game contract, indicating overall user reach.\nTotal Transactions (tx): Counts the total interactions, reflecting overall activity and usage volume.\nTransactions per User (utx): Evaluates user engagement by showing the average number of transactions per player across their lifetime.\nAverage Daily Transactions (uday): Tracks average transaction volume per day, indicating the game's typical daily activity level.\nAverage Daily Active Players (avg_daily_players): Calculates unique players for each day, then averages across all days.\nAverage Weekly Active Players (avg_weekly_players): Calculates unique players for eachvweek, then averages across all weeks.\nAverage New Players Per Week (avg_new_players_per_week): Counts first-time players per week, then averages to show typical weekly growth rate.",
+  "params": []
+ },
+ "5998617": {
+  "name": "LS2-daily players",
+  "version": 6,
+  "file": "5998617_LS2-daily_players.sql",
+  "description": "Daily Player Breakdown\nTotal Players: Counts distinct active players each day, showing daily engagement levels and overall activity trends.\nNew Players: Identifies player acquisition by counting first-time players each day, indicating growth rate and onboarding success.\nExisting Players: Measures player retention by counting returning players (Total - New), showing how many players continue to engage with the game after their first session.",
+  "params": []
+ },
+ "5998872": {
+  "name": "LS2-daily fees",
+  "version": 6,
+  "file": "5998872_LS2-daily_fees.sql",
+  "description": "Game Transaction Fee Analysis\nFees: Total transaction fees paid daily in native tokens (STRK or ETH) for all game activity, including both manual wallet and Cartridge controller transactions.\nFees in USD: Converts total fees to USD for universal cost comparison across different fee tokens and time periods.\nAvg In-Game Action Fee (USD): Average cost per game transaction in USD. This represents the actual cost to execute actions like explore, attack, buy items, etc.\nAvg L1 Gas Price (gwei): Ethereum mainnet gas price, which influences Starknet transaction costs. Higher L1 gas typically correlates with higher Starknet fees as data is settled on Ethereum.",
+  "params": []
+ },
+ "5999014": {
+  "name": "LS2-total fees",
+  "version": 6,
+  "file": "5999014_LS2-total_fees.sql",
+  "description": "Total Game Fee Summary\nFees in USD: Cumulative total of all transaction fees paid (in USD) for game activity since launch. This represents the total economic cost of all in-game actions including explore, attack, buy items, stat upgrades, etc. Includes both manual wallet and Cartridge controller transactions.\nAvg In-Game Action Fee (USD): Average cost per game transaction across all time.",
+  "params": []
+ },
+ "5999424": {
+  "name": "LS2-daily ticket volume",
+  "version": 27,
+  "file": "5999424_LS2-daily_ticket_volume.sql",
+  "description": "Beast Mode Entry Tracking\n\n  Dungeon Tickets Consumed: Number of dungeon tickets burned daily to enter Beast Mode. Counted by tracking ticket token burn events (transfers to zero address).\n\n  Note: Due to a bug in the original TICKET contract, a new DTICKET contract was deployed on November 12, 2025. This query uses TICKET burns before Nov 12 and DTICKET burns from Nov 12 onwards.\n\n  Tickets Consumed (USD): Dollar value of tickets consumed, calculated using daily token prices from Ekubo DEX. Shows the economic value of Beast Mode entry activity. Uses forward-fill to handle days with no trading activity.\n\n  Unique Players: Distinct players who burned tickets each day, identified from the burn event's sender address.\n\n  TICKET Price (USD): Daily average ticket token price in USD from Ekubo DEX, useful for visualizing price trends alongside consumption patterns.\n\n  Acquired from Ekubo: Total DTICKET received by users from Ekubo (Nov 12+ only). Combines pool purchases (swapping LORDS for DTICKET) and TWAMM claims (gradual distribution).",
+  "params": []
+ },
+ "5999508": {
+  "name": "LS2-tickets count",
+  "version": 13,
+  "file": "5999508_LS2-tickets_count.sql",
+  "description": "Beast Mode Tickets\n\n  Total Tickets Consumed: Cumulative count of all dungeon tickets burned to enter Beast Mode since launch. Counted by tracking ticket token burn events (transfers to zero address).\n\n  Note: Due to a bug in the original TICKET contract, a new DTICKET contract was deployed on November 12, 2025. This query uses TICKET burns before Nov 12 and DTICKET burns from Nov 12 onwards.\n\n  Total Tickets Consumed (USD): Total dollar value of all tickets consumed, calculated\n  using historical daily token prices from Ekubo DEX. Uses forward-fill to handle days\n  without trading activity.\n\n  Avg Tickets Consumed Per Day: Average daily ticket consumption rate across all active days.\n\n  Avg Daily Tickets Value (USD): Average daily dollar value of tickets consumed,\n  calculated only for days when price data is available (including forward-filled\n  prices).",
+  "params": []
+ },
+ "5999525": {
+  "name": "LS2-top200 players stats",
+  "version": 28,
+  "file": "5999525_LS2-top200_players_stats.sql",
+  "description": "Top 200 Active Players\nPlayer Address: Unique wallet address of each player.\nTotal Games Started: Number of new games initiated across all game modes using the start_game function.\nTotal Tickets Consumed: Number of dungeon tickets burned to enter Beast Mode. Each ticket = one Beast Mode game entry.\nTotal Deaths: Total number of deaths in Beast Mode.\nHighest Rank: Best rank achieved in Beast Mode leaderboard. Shows peak performance across all Beast Mode leaderboards. \"-\" if not ranked in any Beast Mode leaderboard.\nBeasts Claimed: Number of beasts claimed by the player in Beast Mode. Beasts are collectible NFTs earned through gameplay.\nBeast Hunters Rank: Player's rank on the Top Beast Hunters leaderboard (tier-weighted efficiency scoring). This leaderboard rewards players who efficiently claim high-tier, high-level beasts with fewer deaths. \"-\" if not ranked.\nAvg Lvl: Average level reached at death in Beast Mode. Shows player skill at progression. \"-\" if not ranked in Level Hunters.\nLvl Hunters Rank: Player's rank on the Top Level Hunters leaderboard. Shows efficiency at reaching high levels. \"-\" if not ranked.\nTotal In-Game Txs: All game-related transactions including gameplay actions (explore, attack, flee, buy items, equip, drop, etc.) and Beast Mode entries.\nTotal Paid Fees (USD): Cumulative transaction fees paid in USD across all game activity.\n# of Active Days: Total number of distinct days the player was active.",
+  "params": []
+ },
+ "6014186": {
+  "name": "LS2-deaths (range)",
+  "version": 11,
+  "file": "6014186_LS2-deaths_(range).sql",
+  "description": "Deaths by Level Range\nShows the distribution of player deaths across different level ranges in Beast Mode.\nLevel range: Range of levels grouped together (1-5, 6-10, 11-15, 16-20, 21-30, 31-40, 41-50, 50+).\nDeaths: Total number of deaths that occurred within each level range.\nPercentage: Percentage of total deaths represented by each range.",
+  "params": []
+ },
+ "6014208": {
+  "name": "LS2-deaths by type",
+  "version": 3,
+  "file": "6014208_LS2-deaths_by_type.sql",
+  "description": "Deaths by Type\nDeath type: The cause of death - either \"Beast\" (died while fighting a beast) or \"Obstacle\" (died from a trap/obstacle).\nDeaths: Total number of deaths by each type in Beast Mode.\nPercentage: Percentage of total deaths by each type.",
+  "params": []
+ },
+ "6014360": {
+  "name": "LS2-daily deaths",
+  "version": 10,
+  "file": "6014360_LS2-daily_deaths.sql",
+  "description": "Deaths by Day and Mode\nDate: The day when deaths occurred.\nTotal deaths: Total number of deaths across all game modes on that day.\nDeaths in Beast Mode: Number of deaths in Beast Mode games on that day. Beast Mode games are identified by having tournament_start_time = 0.\nDeaths in Other Modes: Number of deaths in tournament/non-Beast Mode games on that day. These games are identified by having tournament_start_time > 0.",
+  "params": []
+ },
+ "6015003": {
+  "name": "LS2-beasts daily",
+  "version": 12,
+  "file": "6015003_LS2-beasts_daily.sql",
+  "description": "Daily Beast Claims by Tier\nDate: The calendar date when beasts were claimed as NFTs.\nT1-T5 Beasts Claimed: Number of beast NFTs claimed for each tier on that date. Each tier contains exactly 15 beasts (20% of total), balanced across Magic, Hunter, and Brute types. T1 beasts provide highest rewards (5x gold), T5 provide lowest (1x gold).\nTier ranges: T1 (1-5,26-30,51-55), T2 (6-10,31-35,56-60), T3 (11-15,36-40,61-65), T4 (16-20,41-45,66-70), T5 (21-25,46-50,71-75).",
+  "params": []
+ },
+ "6124973": {
+  "name": "LS2-weekly players",
+  "version": 4,
+  "file": "6124973_LS2-weekly_players.sql",
+  "description": "Weekly Player Breakdown\nTotal Players: Counts distinct active players each week, showing weekly engagement levels and overall activity trends.\nNew Players: Identifies player acquisition by counting first-time players each week, indicating growth rate and onboarding success.\nExisting Players: Measures player retention by counting returning players (Total - New), showing how many players continue to engage with the game after their first session.",
+  "params": []
+ },
+ "6127103": {
+  "name": "LS2-beasts claimed",
+  "version": 60,
+  "file": "6127103_LS2-beasts_claimed.sql",
+  "description": "Beast Claims by Tier Distribution\nTotal Beasts Claimed: Total number of beast NFTs claimed across all players, grouped by tier (T1-T5). Each tier contains exactly 15 beasts (20% of total), balanced across Magic, Hunter, and Brute types. T1 beasts provide the highest rewards (5x gold), T5 provide lowest (1x gold).\nUnique Collectors: Number of distinct wallet addresses that have claimed at least one beast NFT from each tier.\nBeast Tier: Classification based on actual game logic from beast.cairo:\n- T1 (IDs 1-5, 26-30, 51-55) - Highest value, 15 beasts\n- T2 (IDs 6-10, 31-35, 56-60) - High value, 15 beasts\n- T3 (IDs 11-15, 36-40, 61-65) - Medium value, 15 beasts\n- T4 (IDs 16-20, 41-45, 66-70) - Low value, 15 beasts\n- T5 (IDs 21-25, 46-50, 71-75) - Lowest value, 15 beasts\nThis query uses temporal matching to link beast NFT Transfer events (claims) to their corresponding beast encounter events (CollectableEntity with full stats), enabling accurate tier classification of all claimed beasts across the game ecosystem.",
+  "params": []
+ },
+ "6358788": {
+  "name": "LS2-low issuance mode",
+  "version": 11,
+  "file": "6358788_LS2-low_issuance_mode.sql",
+  "description": "DTICKET Issuance Mode Status\n\n  Displays the current state of DTICKET's Adaptive Issuance Mechanism for dashboard counters.\n\n  Low issuance mode: Binary indicator (1 = ON, 0 = OFF). Low issuance mode activates when DTICKET price stays below $1 for 3+ consecutive days, halving the emission rate to reduce sell pressure.\n\n  Daily emission rate: Current token emission rate in DTICKET per day. Default rate is ~2,085/day (100M tokens over 132 years). Low issuance rate is ~1,042/day (half of default).\n\n  Mode since: Timestamp when the current issuance mode was activated, tracked by monitoring enable_low_issuance_mode function calls on the DTICKET contract.",
+  "params": []
+ },
+ "6359367": {
+  "name": "LS2-lords revenue",
+  "version": 5,
+  "file": "6359367_LS2-lords_revenue.sql",
+  "description": "",
+  "params": []
+ },
+ "6359411": {
+  "name": "LS2-buybacks",
+  "version": 5,
+  "file": "6359411_LS2-buybacks.sql",
+  "description": "SURVIVOR Buybacks\n\n  Weekly tracking of SURVIVOR tokens bought back via TWAMM and claimed to governance.\n\n  Buyback claims: Number of buyback claim transactions per week. Each claim withdraws accumulated SURVIVOR from completed TWAMM orders.\n\n  SURVIVOR claimed: Total SURVIVOR tokens transferred from Ekubo Core to Survivor\n  Controller (governance) as buyback results.\n\n  SURVIVOR claimed (USD): Dollar value of claimed SURVIVOR using weekly average price from Ekubo DEX.\n\n  SURVIVOR price (USD): Weekly average SURVIVOR token price from Ekubo DEX.\n\n  Buyback Flow: 80% of LORDS from ticket sales goes to Treasury \u2192 Treasury creates TWAMM orders on Ekubo to gradually sell LORDS for SURVIVOR \u2192 When orders complete, SURVIVOR is claimed and sent to Survivor Controller for DAO governance.",
+  "params": []
+ },
+ "6359454": {
+  "name": "LS2-buyback numbers",
+  "version": 7,
+  "file": "6359454_LS2-buyback_numbers.sql",
+  "description": "Revenue & Buyback Totals\n\n  All-time summary counters for LORDS revenue distribution and SURVIVOR buybacks.\n\n  Total LORDS revenue: Cumulative LORDS earned from all dungeon ticket sales since launch. Combines TICKET contract (before Nov 12, 2025) and DTICKET contract (from Nov 12 onwards).\n\n  Total LORDS revenue (USD): Dollar value using latest LORDS price from Ekubo DEX.\n\n  Treasury LORDS (80%): Total LORDS sent to Treasury, used for automated SURVIVOR buybacks via TWAMM on Ekubo.\n\n  veLORDS LORDS (20%): Total LORDS distributed to veLORDS stakers, rewarding the Bibliotheca DAO ecosystem as the original incubator of Loot Survivor.\n\n  Total SURVIVOR bought back: Cumulative SURVIVOR tokens claimed from Ekubo TWAMM buybacks and sent to Survivor Controller (governance). Represents actual buybacks completed and withdrawn, not pending orders.\n\n  Total SURVIVOR (USD): Dollar value using current SURVIVOR price from Ekubo DEX.",
+  "params": []
+ },
+ "6472962": {
+  "name": "LS2-LS Share of Starknet Txs",
+  "version": 3,
+  "file": "6472962_LS2-LS_Share_of_Starknet_Txs.sql",
+  "description": "Base Game Transaction Tracking\n\nDaily breakdown of game transactions vs total Starknet network transactions\n\nTracks direct calls and VRF-wrapped calls to game contracts\n\nGame Contracts (function selectors): [listed]\n\nOutput: Stacked chart data showing Game vs Other Starknet transactions per day",
+  "params": []
+ },
+ "6576384": {
+  "name": "LS2-top50 players (2 weeks)",
+  "version": 4,
+  "file": "6576384_LS2-top50_players_(2_weeks).sql",
+  "description": "Top 50 Beast Mode Leaderboard (Last 2 Weeks)\nPlayers ranked by highest level reached at death in Beast Mode\nRolling 2-week window",
+  "params": []
+ },
+ "6608266": {
+  "name": "LS2-daily dticket purchases",
+  "version": 4,
+  "file": "6608266_LS2-daily_dticket_purchases.sql",
+  "description": "DTICKET Purchases by Payment Token - V1\n\nDay: Date of the purchases.\nPayment Token: The token users used to pay for DTICKET (SURVIVOR, STRK, LORDS, ETH, USDC, etc.)\nPurchases: Number of DTICKET purchases made with each payment token on that day.\nThis chart shows daily DTICKET purchases via Cartridge Controller, broken down by payment token.\nWhen users buy DTICKET through Cartridge, they can pay with various tokens (SURVIVOR, STRK, LORDS, etc.).\nThe Cartridge intermediary (0x0199...) receives the payment token, swaps it on Ekubo for DTICKET, and forwards the DTICKET to the user. This visualization helps understand which tokens players prefer to use when purchasing dungeon tickets.",
+  "params": []
+ }
+}

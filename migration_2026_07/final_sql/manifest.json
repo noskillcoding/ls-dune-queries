@@ -1,0 +1,132 @@
+{
+ "5996309": {
+  "name": "LS2-daily",
+  "version": 10,
+  "file": "5996309_ls2_daily.sql"
+ },
+ "5996449": {
+  "name": "LS2-total",
+  "version": 15,
+  "file": "5996449_ls2_total.sql"
+ },
+ "5998617": {
+  "name": "LS2-daily players",
+  "version": 7,
+  "file": "5998617_ls2_daily_players.sql"
+ },
+ "5998872": {
+  "name": "LS2-daily fees",
+  "version": 7,
+  "file": "5998872_ls2_daily_fees.sql"
+ },
+ "5999014": {
+  "name": "LS2-total fees",
+  "version": 7,
+  "file": "5999014_ls2_total_fees.sql"
+ },
+ "5999424": {
+  "name": "LS2-daily ticket volume",
+  "version": 27,
+  "file": "5999424_ls2_daily_ticket_volume.sql"
+ },
+ "5999508": {
+  "name": "LS2-tickets count",
+  "version": 13,
+  "file": "5999508_ls2_tickets_count.sql"
+ },
+ "5999525": {
+  "name": "LS2-top200 players stats",
+  "version": 29,
+  "file": "5999525_ls2_top200_players_stats.sql"
+ },
+ "6004055": {
+  "name": "LS2-top50 beast hunters (2 weeks)",
+  "version": 23,
+  "file": "6004055_ls2_top50_beast_hunters_2_weeks.sql"
+ },
+ "6011955": {
+  "name": "LS2-deaths",
+  "version": 53,
+  "file": "6011955_ls2_deaths.sql"
+ },
+ "6013674": {
+  "name": "LS2-top50 level hunters (2 weeks)",
+  "version": 16,
+  "file": "6013674_ls2_top50_level_hunters_2_weeks.sql"
+ },
+ "6014186": {
+  "name": "LS2-deaths (range)",
+  "version": 12,
+  "file": "6014186_ls2_deaths_range.sql"
+ },
+ "6014208": {
+  "name": "LS2-deaths by type",
+  "version": 4,
+  "file": "6014208_ls2_deaths_by_type.sql"
+ },
+ "6014300": {
+  "name": "LS2-top200 beast mode",
+  "version": 6,
+  "file": "6014300_ls2_top200_beast_mode.sql"
+ },
+ "6014360": {
+  "name": "LS2-daily deaths",
+  "version": 12,
+  "file": "6014360_ls2_daily_deaths.sql"
+ },
+ "6015003": {
+  "name": "LS2-beasts daily",
+  "version": 13,
+  "file": "6015003_ls2_beasts_daily.sql"
+ },
+ "6124973": {
+  "name": "LS2-weekly players",
+  "version": 5,
+  "file": "6124973_ls2_weekly_players.sql"
+ },
+ "6125279": {
+  "name": "LS2-ticket price",
+  "version": 10,
+  "file": "6125279_ls2_ticket_price.sql"
+ },
+ "6127103": {
+  "name": "LS2-beasts claimed",
+  "version": 61,
+  "file": "6127103_ls2_beasts_claimed.sql"
+ },
+ "6358788": {
+  "name": "LS2-low issuance mode",
+  "version": 11,
+  "file": "6358788_ls2_low_issuance_mode.sql"
+ },
+ "6359367": {
+  "name": null,
+  "version": null,
+  "file": "6359367_ls2_lords_revenue.sql"
+ },
+ "6359411": {
+  "name": null,
+  "version": null,
+  "file": "6359411_ls2_buybacks.sql"
+ },
+ "6359454": {
+  "name": null,
+  "version": null,
+  "file": "6359454_ls2_buyback_numbers.sql"
+ },
+ "6472962": {
+  "name": null,
+  "version": null,
+  "file": "6472962_ls2_share_of_starknet_txs.sql"
+ },
+ "6576384": {
+  "name": null,
+  "version": null,
+  "file": "6576384_ls2_top50_players_2w.sql"
+ },
+ "6608266": {
+  "name": null,
+  "version": null,
+  "file": "6608266_ls2_daily_dticket_purchases.sql"
+ }
+}
