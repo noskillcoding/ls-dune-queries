@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+# vendored upstream clones - not ours to redistribute
+death-mountain-main/
+controller-main/
+ticket-master-main/
+# scratch / scraped artifacts
+finddashboard.json
